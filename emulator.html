@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Emulator</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            color: #FFF;
+            overflow: hidden;
+        }
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #game {
+            width: 80%;
+            max-width: 800px;
+            aspect-ratio: 4 / 3;
+            background: #111;
+            border: 2px solid #444;
+        }
+        #controls {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #0D47A1;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1565C0;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="game"></div>
+        <div id="controls">
+            <button onclick="try { loadGame('Killer Instinct (U) (V1.1) [!].zip'); } catch (error) { console.error('Error in Load Game 1 button:', error); }">Load Game 1</button>
+            <button onclick="try { loadGame('Legend of Zelda, The - A Link to the Past (U) [!].zip'); } catch (error) { console.error('Error in Load Game 2 button:', error); }">Load Game 2</button>
+            <button onclick="try { resetGame(); } catch (error) { console.error('Error in Reset button:', error); }">Reset</button>
+        </div>
+    </div>
+    <script>
+        let EJS_player = '#game';
+        let EJS_core = 'nes'; // Change core name as needed
+        let EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+        let EJS_gameUrl = '';
+
+        function loadGame(gameUrl) {
+            try {
+                EJS_gameUrl = `${EJS_pathtodata}${gameUrl}`;
+                let script = document.createElement('script');
+                script.src = 'https://cdn.emulatorjs.org/stable/data/loader.js';
+                document.body.appendChild(script);
+                console.log(`Game loaded: ${gameUrl}`);
+            } catch (error) {
+                console.error('Error loading game:', error);
+            }
+        }
+
+        function resetGame() {
+            try {
+                document.querySelector('#game').innerHTML = '';
+                loadGame(EJS_gameUrl);
+                console.log('Game reset');
+            } catch (error) {
+                console.error('Error resetting game:', error);
+            }
+        }
+
+        // Load initial game (optional)
+        try {
+            // loadGame('game1.zip');
+        } catch (error) {
+            console.error('Error loading initial game:', error);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Charts Showcase</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body,
+        html {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #000000;
+            color: #E0E0E0;
+        }
+
+        .navbar-main {
+            width: 100%;
+            background-color: #2F2E2E;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .chart-container {
+            margin: 20px 0;
+        }
+
+        .chart {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-main">
+        <a class="navbar-brand" href="#">KOHLYDE <i class="fas fa-record-vinyl"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#charts">Charts</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="tel:+123456789"><i class="fas fa-phone"></i></a>
+                <a class="nav-link" href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a class="nav-link" href="https://github.com/"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content">
+        <section id="home">
+            <h1>Welcome to My Comprehensive Charts Showcase</h1>
+            <p>This is a sample website with every chart type from Chart.js, Highcharts, and AMCharts integrated.</p>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>Here you can put some information about yourself or your company.</p>
+        </section>
+
+        <section id="charts">
+            <h2>Charts</h2>
+
+            <!-- Chart.js Examples -->
+            <div class="chart-container">
+                <h3>Chart.js Bar Chart</h3>
+                <canvas id="chartjsBarChart" class="chart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3>Chart.js Line Chart</h3>
+                <canvas id="chartjsLineChart" class="chart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3>Chart.js Pie Chart</h3>
+                <canvas id="chartjsPieChart" class="chart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3>Chart.js Doughnut Chart</h3>
+                <canvas id="chartjsDoughnutChart" class="chart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3>Chart.js Polar Area Chart</h3>
+                <canvas id="chartjsPolarAreaChart" class="chart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3>Chart.js Radar Chart</h3>
+                <canvas id="chartjsRadarChart" class="chart"></canvas>
+            </div>
+
+            <!-- Highcharts Examples -->
+            <div class="chart-container">
+                <h3>Highcharts Line Chart</h3>
+                <div id="highchartsLineChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Highcharts Spline Chart</h3>
+                <div id="highchartsSplineChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Highcharts Area Chart</h3>
+                <div id="highchartsAreaChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Highcharts Column Chart</h3>
+                <div id="highchartsColumnChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Highcharts Bar Chart</h3>
+                <div id="highchartsBarChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Highcharts Pie Chart</h3>
+                <div id="highchartsPieChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Highcharts Scatter Chart</h3>
+                <div id="highchartsScatterChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Highcharts Bubble Chart</h3>
+                <div id="highchartsBubbleChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Highcharts Heatmap</h3>
+                <div id="highchartsHeatmapChart" class="chart"></div>
+            </div>
+
+            <!-- AMCharts Examples -->
+            <div class="chart-container">
+                <h3>AMCharts XY Chart</h3>
+                <div id="amchartsXYChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>AMCharts Pie Chart</h3>
+                <div id="amchartsPieChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>AMCharts Line Chart</h3>
+                <div id="amchartsLineChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>AMCharts Radar Chart</h3>
+                <div id="amchartsRadarChart" class="chart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>AMCharts Funnel Chart</h
